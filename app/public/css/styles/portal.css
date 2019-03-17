@@ -1,0 +1,18 @@
+.user-table-container
+.btn {
+    width: 80px;
+}
+
+.user-table-container
+.show-user-detail {
+    margin-right: 15px;
+}
+
+.user-table-container
+.table-dark {
+    text-align: center;
+}
+
+.user-table-container tbody {
+    text-align: center;
+}

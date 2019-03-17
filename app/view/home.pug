@@ -1,0 +1,24 @@
+extends  ./portal.pug
+
+block main
+    table.table.user-table-container
+        thead.table-dark
+            tr
+                th Id
+                th Name
+                th Age
+                th Address
+                th Role
+                th Actions
+        tbody
+            if users
+                each user in users
+                    tr
+                        th #{user.id}
+                        th #{user.name}
+                        th #{user.age}
+                        th #{user.address}
+                        th #{user.role}
+                        th 
+                            button.btn.btn-info.show-user-detail(data-id=`${user.id}`) Detail
+                            button.btn.btn-info.edit-user(data-id=`${user.id}`) Edit

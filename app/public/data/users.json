@@ -1,0 +1,46 @@
+{
+    "description": "User info",
+    "users": [{
+        "id": "10001",
+        "name": "Shanke",
+        "age": 22,
+        "address": "Shanghai",
+        "role": "Admin"
+    }, {
+        "id": "10002",
+        "name": "Alice",
+        "age": 21,
+        "address": "Shanghai",
+        "role": "Admin"
+    }, {
+        "id": "10003",
+        "name": "Mary",
+        "age": 12,
+        "address": "Shanghai",
+        "role": "Designer"
+    }, {
+        "id": "10004",
+        "name": "Owen",
+        "age": 24,
+        "address": "Suzhou",
+        "role": "Manager"
+    }, {
+        "id": "10005",
+        "name": "Shanke-Dee",
+        "age": 22,
+        "address": "Shanghai",
+        "role": "Admin"
+    }, {
+        "id": "10006",
+        "name": "Shanke-dudu",
+        "age": 22,
+        "address": "Shanghai",
+        "role": "Admin"
+    }, {
+        "id": "10007",
+        "name": "Shanke",
+        "age": 22,
+        "address": "Shanghai",
+        "role": "Admin"
+    }]
+}
