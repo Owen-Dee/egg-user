@@ -1,6 +1,4 @@
-class Portal {
-    static _instance = null;
-
+class Home {
     constructor() {
 
     }
@@ -37,8 +35,9 @@ class Portal {
             window.location.href = `${window.location.origin}/user/${id}`;
         });
 
-        elements.editDom.off('click').on('click', () => {
-
+        elements.editDom.off('click').on('click', function() {
+            const id = $(this).attr('data-id');
+            window.location.href = `${window.location.origin}/user-edit/${id}`;
         });
     }
 
@@ -66,26 +65,12 @@ class Portal {
         }); 
     }
 
-    update() {
-        const url = '/user/1';
-        const type = 'Put';
-        const data = {
-            age: 33
-        };
-        this.service(url, type, data).then((result) => {
-            debugger
-            console.log(result);
-        }).catch((error) => {
-            console.error('Get users info error: ' + error);
-        });  
-    }
-
     static getInstance() {
-        Portal._instance = Portal._instance || new Portal();
+        Home._instance = Home._instance || new Home();
 
-        return Portal._instance;
+        return Home._instance;
     }
 }
 
-let portal = Portal.getInstance();
-portal.init();
+let home = Home.getInstance();
+home.init();

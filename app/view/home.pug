@@ -1,4 +1,4 @@
-extends  ./portal.pug
+extends ./layout/portal.pug
 
 block main
     table.table.user-table-container
@@ -22,3 +22,6 @@ block main
                         th 
                             button.btn.btn-info.show-user-detail(data-id=`${user.id}`) Detail
                             button.btn.btn-info.edit-user(data-id=`${user.id}`) Edit
+
+block scripts
+        script(src='../public/js/logic/home.js')

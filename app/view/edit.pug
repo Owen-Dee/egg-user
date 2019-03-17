@@ -1,0 +1,28 @@
+extends ./layout/portal.pug
+
+
+block main
+    if user
+        form.user-info
+            .col-md-2.col-form-label 
+                .title Name
+            .col-md-10
+                input.form-control.name(value=`${user.name}`)
+            .col-md-2.col-form-label 
+                .title Age
+            .col-md-10
+                input.form-control.age(value=`${user.age}`)
+            .col-md-2.col-form-label 
+                .title Address
+            .col-md-10
+                input.form-control.address(value=`${user.address}`)
+            .col-md-2.col-form-label 
+                .title Role
+            .col-md-10
+                input.form-control.role(value=`${user.role}`)
+            .col-md-12
+                button.btn.btn-primary.save-btn(data-id=`${user.id}`) Save
+
+block scripts
+        script(src='../public/js/logic/edit.js')
+    

@@ -3,22 +3,32 @@
 const Controller = require('egg').Controller;
 
 class UserController extends Controller {
-    async findAll() {
+    async getAllUsers() {
         this.ctx.body = await this.ctx.service.user.findAll();
     }
 
-    async findById() {
+    async getUserById() {
         const id = this.ctx.params.id;
-        const user = await this.ctx.service.user.findById(id);
+        const user = await this.ctx.service.user.getUserById(id);
         await this.ctx.render('detail.pug', {
             user
         });
     }
 
-    async update() {
+    async showEditUserInfo() {
+        const id = this.ctx.params.id;
+        const user = await this.ctx.service.user.getUserById(id);
+        await this.ctx.render('edit.pug', {
+            user
+        }); 
+    }
+
+    async updateUser() {
         const id = this.ctx.params.id;
         const body = this.ctx.request.body;
-        this.ctx.body = await this.ctx.service.user.update(id, body);
+        const result = await this.ctx.service.user.updateUser(id, body);
+
+        this.ctx.body = result;
     }
 }
 
