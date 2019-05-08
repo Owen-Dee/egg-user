@@ -67,7 +67,7 @@ class UserService extends Service {
             });
 
             res.users = users;
-            const str = JSON.stringify(res);
+            const str = JSON.stringify(res, '', '\t');
             fs.writeFileSync(process.cwd() + '/app/public/data/users.json', str);
 
             return Object.assign({}, {

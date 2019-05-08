@@ -53,16 +53,19 @@ class Edit {
     updateUser(id, user) {
         const url = `/user/${id}`;
         const type = 'Put';
+        // window.history.pushState({}, '', url);
         this.service(url, type, user).then((result) => {
+            debugger
             if (!result) {
                 return;
             }
 
             console.log(result);
 
-            if (result.message === 'Success') {
-                window.location.href = `${window.location.origin}/user/${id}`;
-            }
+            // if (result.message === 'Success') {
+            //     debugger
+            //     window.location.href = `${window.location.origin}/user/${id}`;
+            // }
         }).catch((error) => {
             console.error('Update user info error: ' + error);
         });  
